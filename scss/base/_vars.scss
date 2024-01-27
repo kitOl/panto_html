@@ -6,7 +6,7 @@
 
   --header-text-color: #ffffff;
 
-  --footer-bg-color: #0d1b39;
+  --footer-bg: #0d1b39;
   --footer-text-color: #ffffff;
   --footer-accent: #f6973f;
 
@@ -18,4 +18,10 @@
   --font-main: "Gilroy", sans-serif;
   --font-cards: "Inter", sans-serif;
   --font-footer-accent: "DM Sans", sans-serif;
+}
+
+@mixin retina-bg($image) {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: $image;
+  }
 }

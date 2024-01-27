@@ -7,12 +7,53 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <h1>Panto Shop</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde totam
-      necessitatibus, expedita eaque nihil similique saepe porro laudantium
-      alias vitae, molestias facere hic accusamus repudiandae eum amet suscipit
-      consequatur?
-    </p>
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav nav">
+          <a href="#!" class="nav__logo">Panto</a>
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="#!" class="nav-list__link">Furniture</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#!" class="nav-list__link">Shop</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#!" class="nav-list__link">About Us</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#!" class="nav-list__link">Contact</a>
+            </li>
+          </ul>
+
+          <a class="cart" href="#!">
+            <img class="cart__img" src="./img/icons/cart.svg" alt="Cart" />
+            <div class="cart__count">0</div>
+          </a>
+        </nav>
+
+        <div class="header__content">
+          <h1 class="header__title">
+            Make your interior more <br />minimalistic & modern
+          </h1>
+          <p>
+            Turn your room with panto into a lot more minimalist and modern with
+            ease and speed
+          </p>
+
+          <form class="header__search search-form" action="">
+            <input
+              class="search-form__input"
+              type="text"
+              placeholder="Search furniture"
+              autocomplete="off"
+            />
+            <button class="serch-form__btn">
+              <img src="./img/icons/search.svg" alt="Search it" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
