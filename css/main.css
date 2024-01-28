@@ -116,6 +116,7 @@ legend {
   --text-card: #0d1b39;
   --accent: #e58411;
   --header-text-color: #ffffff;
+  --product-photo-bg: #fafafa;
   --footer-bg: #0d1b39;
   --footer-text-color: #ffffff;
   --footer-accent: #f6973f;
@@ -124,7 +125,7 @@ legend {
   --ui-gray: #7c7c7c;
   --ui-dark-blue: #0d1b39;
   --font-main: "Gilroy", sans-serif;
-  --font-cards: "Inter", sans-serif;
+  --font-card: "Inter", sans-serif;
   --font-footer-accent: "DM Sans", sans-serif;
 }
 
@@ -463,6 +464,8 @@ body {
 }
 
 .products__slider {
+  display: flex;
+  justify-content: center;
   margin-bottom: 60px;
 }
 
@@ -494,4 +497,96 @@ body {
 }
 .tab-controls__btn--active {
   background-color: #fff;
+}
+
+.card {
+  position: relative;
+  width: 268px;
+}
+
+.card__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card__photo {
+  height: 240px;
+  background-color: var(--product-photo-bg);
+  border-radius: 20px 20px 0 0;
+}
+
+.card__img {
+  margin-top: -50px;
+}
+
+.card__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  height: 202px;
+  padding: 14px 22px 28px;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  font-family: var(--font-card);
+  color: var(--text-card);
+}
+
+.card__category {
+  position: relative;
+  z-index: 3;
+  color: var(--text-muted);
+  font-size: 16.755px;
+}
+
+.card__title {
+  font-size: 21.325px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.card__rating {
+  display: flex;
+  gap: 3px;
+  height: 18.279px;
+  flex-shrink: 0;
+}
+
+.card__footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price {
+  display: flex;
+  align-items: flex-start;
+  gap: 3px;
+  font-size: 21.325px;
+  font-weight: 600;
+}
+.card__price::before {
+  content: attr(data-value);
+  font-size: 15.232px;
+  font-weight: 600;
+}
+
+.card__btn {
+  position: relative;
+  z-index: 3;
+  width: 49px;
+  height: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ui-dark-blue);
+  border-radius: 50%;
+  transition: opacity 0.2s ease-in;
+}
+.card__btn:hover {
+  opacity: 0.8;
 }/*# sourceMappingURL=main.css.map */
