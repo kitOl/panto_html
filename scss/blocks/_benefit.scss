@@ -1,0 +1,31 @@
+.benefit {
+  max-width: 284px;
+}
+
+.benefit__title {
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.benefit__text {
+  font-size: 16px;
+  line-height: 185%; /* 29.6px */
+  opacity: 0.8;
+  margin-bottom: 14px;
+}
+
+.benefit__link {
+  display: inline-flex;
+  gap: 13px;
+  align-items: center;
+  color: var(--accent);
+  font-size: 14px;
+  line-height: 185%; /* 25.9px */
+
+  &::after {
+    content: url(./../img/icons/arrow-right.svg);
+    height: 24px;
+  }
+}
