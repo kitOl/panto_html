@@ -430,7 +430,7 @@ body {
   margin-bottom: 14px;
 }
 
-.benefit__link {
+.read-more {
   display: inline-flex;
   gap: 13px;
   align-items: center;
@@ -438,7 +438,60 @@ body {
   font-size: 14px;
   line-height: 185%; /* 25.9px */
 }
-.benefit__link::after {
+.read-more::after {
   content: url(./../img/icons/arrow-right.svg);
   height: 24px;
+}
+.read-more--large {
+  font-size: 18px;
+}
+
+.products {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.products__title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.products__tabs {
+  margin-bottom: 80px;
+}
+
+.products__slider {
+  margin-bottom: 60px;
+}
+
+.tab-controls {
+  display: inline-flex;
+  padding: 6px;
+  align-items: flex-start;
+  border-radius: 44px;
+  background: #eee;
+}
+
+.tab-controls__btn {
+  display: flex;
+  width: 84px;
+  height: 45px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 32px;
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 185%; /* 33.3px */
+  transition: background-color 0.2s ease-in;
+}
+.tab-controls__btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.tab-controls__btn--active {
+  background-color: #fff;
 }/*# sourceMappingURL=main.css.map */
