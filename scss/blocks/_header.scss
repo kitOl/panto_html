@@ -1,10 +1,12 @@
 .header {
+  position: relative;
   padding-top: 40px;
   background-color: var(--footer-bg);
   background-image: url("./../img/header/header-bg.jpg");
   background-size: cover;
   //   background-repeat: no-repeat;
-  aspect-ratio: 1440 / 1084;
+  aspect-ratio: calc(var(--frame-width) / var(--frame-height));
+  // aspect-ratio: 1440 / 1084;
 
   color: var(--header-text-color);
 
@@ -38,8 +40,41 @@
   margin: 0 auto;
   font-size: 24px;
   line-height: 160%; /* 38.4px */
+  opacity: 0.8;
 }
 
 .header__search {
   margin: 45px auto 0;
+}
+
+.header__dot-sofa {
+  position: absolute;
+  left: calc(100% * 290 / var(--frame-width));
+  top: calc(100% * 679 / var(--frame-height));
+
+  transform: translate(50%, 50%);
+}
+
+.header__dot-vase {
+  position: absolute;
+  left: calc(100% * 103 / var(--frame-width));
+  top: calc(100% * 743 / var(--frame-height));
+
+  transform: translate(50%, 50%);
+}
+
+.header__dot-item {
+  position: absolute;
+  left: calc(100% * 800 / var(--frame-width));
+  top: calc(100% * 777 / var(--frame-height));
+
+  transform: translate(50%, 50%);
+}
+
+.header__dot-flowerpot {
+  position: absolute;
+  left: calc(100% * 1369 / var(--frame-width));
+  top: calc(100% * 809 / var(--frame-height));
+
+  transform: translate(50%, 50%);
 }
