@@ -40,18 +40,44 @@ const swiper = new Swiper(".swiper", {
     nextEl: "#sliderNext",
     prevEl: "#sliderPrev",
   },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 32,
-    },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 42,
-    },
-  },
+  // breakpoints: {
+  //   640: {
+  //     slidesPerView: 2,
+  //     spaceBetween: 20,
+  //   },
+  //   768: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 32,
+  //   },
+  //   1340: {
+  //     slidesPerView: 4,
+  //     spaceBetween: 42,
+  //   },
+  // },
 });
+
+const tabsBtns = document.querySelectorAll("[data-tab]");
+const tabsProducts = document.querySelectorAll("[data-tab-value]");
+
+for (let btn of tabsBtns) {
+  btn.addEventListener("click", function () {
+    for (let btn of tabsBtns) {
+      btn.classList.remove("tab-controls__btn--active");
+    }
+
+    this.classList.add("tab-controls__btn--active");
+
+    for (let product of tabsProducts) {
+      if (
+        this.dataset.tab === "all" ||
+        product.dataset.tabValue === this.dataset.tab
+      ) {
+        product.classList.remove("none");
+      } else {
+        product.classList.add("none");
+      }
+    }
+
+    swiper.update();
+  });
+}

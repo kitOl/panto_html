@@ -32,5 +32,9 @@
 
   &--active {
     background-color: #fff;
+
+    &:hover {
+      background: #fff;
+    }
   }
 }
