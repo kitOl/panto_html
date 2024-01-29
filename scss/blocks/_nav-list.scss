@@ -12,6 +12,43 @@
 }
 
 .nav-list__item {
+  position: relative;
 }
+
 .nav-list__link {
+  transition: opacity 0.1s ease-in;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &--droplist {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &::after {
+      content: url("./../img/icons/arrow-down.svg");
+      height: 18px;
+    }
+  }
+}
+
+.nav-list__sub-list {
+  opacity: 0;
+  pointer-events: none;
+
+  position: absolute;
+  left: -10px;
+  top: calc(100% + 0px);
+
+  transform: translate(0%, 10%);
+
+  transition: all 0.2s ease-in;
+}
+
+.nav-list__item:hover .nav-list__sub-list {
+  pointer-events: all;
+  opacity: 1;
+  transform: translate(0%, 0%);
 }

@@ -117,6 +117,7 @@ legend {
   --accent: #e58411;
   --header-text-color: #ffffff;
   --logo-text-color: #ffffff;
+  --header-sublist-bg: #3e404e;
   --product-photo-bg: #fafafa;
   --footer-bg: #2d2f33;
   --footer-text-color: #ffffff;
@@ -254,6 +255,57 @@ body {
   gap: 65px;
   font-weight: 500;
   font-size: 18px;
+}
+
+.nav-list__item {
+  position: relative;
+}
+
+.nav-list__link {
+  transition: opacity 0.1s ease-in;
+}
+.nav-list__link:hover {
+  opacity: 0.8;
+}
+.nav-list__link--droplist {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.nav-list__link--droplist::after {
+  content: url("./../img/icons/arrow-down.svg");
+  height: 18px;
+}
+
+.nav-list__sub-list {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: -10px;
+  top: calc(100% + 0px);
+  transform: translate(0%, 10%);
+  transition: all 0.2s ease-in;
+}
+
+.nav-list__item:hover .nav-list__sub-list {
+  pointer-events: all;
+  opacity: 1;
+  transform: translate(0%, 0%);
+}
+
+.sub-list {
+  display: grid;
+  gap: 16px;
+  padding: 20px 20px 15px;
+  background-color: var(--header-sublist-bg);
+  border-radius: 0 0 10px 10px;
+}
+.sub-list a {
+  color: var(--header-text-color);
+  transition: color 0.15s ease-in;
+}
+.sub-list a:hover {
+  color: var(--accent);
 }
 
 .cart {

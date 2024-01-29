@@ -1,0 +1,27 @@
+.sub-list {
+  display: grid;
+  gap: 16px;
+
+  padding: 20px 20px 15px;
+  background-color: var(--header-sublist-bg);
+  border-radius: 0 0 10px 10px;
+
+  // font-size: 14px;
+
+  a {
+    color: var(--header-text-color);
+    // color: rgba(255, 255, 255, 0.7);
+
+    transition: color 0.15s ease-in;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.sub-list__item {
+}
+
+.sub-list__link {
+}
