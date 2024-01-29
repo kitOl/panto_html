@@ -592,9 +592,6 @@ body {
 
 .slider {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 42px;
 }
 
 .slider__btn {
@@ -606,18 +603,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
 }
 
 .slider__btn--prev {
-  position: absolute;
   left: 0;
-  top: 50%;
   transform: translate(-50%, -50%);
 }
 
 .slider__btn--next {
-  position: absolute;
   right: 0;
-  top: 50%;
   transform: translate(50%, -50%);
 }/*# sourceMappingURL=main.css.map */
