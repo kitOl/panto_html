@@ -7,3 +7,11 @@
 .nav__logo {
   text-align: center;
 }
+
+.nav__btn {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}

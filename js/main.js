@@ -81,3 +81,15 @@ for (let btn of tabsBtns) {
     swiper.update();
   });
 }
+
+const mobileNavOpenBtn = document.querySelector("#open-mobile-nav-btn");
+const mobileNavCloseBtn = document.querySelector("#close-mobile-nav-btn");
+const mobileMenu = document.querySelector(".mobile-nav__wrapper");
+
+mobileNavOpenBtn.onclick = function () {
+  mobileMenu.classList.add("mobile-nav__wrapper--open");
+};
+
+mobileNavCloseBtn.onclick = function () {
+  mobileMenu.classList.remove("mobile-nav__wrapper--open");
+};

@@ -14,7 +14,7 @@
   --product-photo-bg: #fafafa;
 
   --footer-bg: #2d2f33;
-  --footer-text-color: #ffffff;
+  --footer-text-color: rgba(255, 255, 255, 0.8);
   --footer-accent: #f6973f;
 
   --ui-orange: #e58411;
@@ -30,5 +30,11 @@
 @mixin retina-bg($image) {
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: $image;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: 992px) {
+    @content;
   }
 }

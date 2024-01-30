@@ -120,7 +120,7 @@ legend {
   --header-sublist-bg: #3e404e;
   --product-photo-bg: #fafafa;
   --footer-bg: #2d2f33;
-  --footer-text-color: #ffffff;
+  --footer-text-color: rgba(255, 255, 255, 0.8);
   --footer-accent: #f6973f;
   --ui-orange: #e58411;
   --ui-biruza: #00d6c9;
@@ -154,7 +154,6 @@ body {
 }
 
 .header {
-  position: relative;
   padding-top: 40px;
   background-color: var(--footer-bg);
   background-image: url("./../img/header/header-bg.jpg");
@@ -228,6 +227,14 @@ body {
   transform: translate(50%, 50%);
 }
 
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.28px;
+  text-transform: capitalize;
+  color: var(--logo-text-color) !important;
+}
+
 .nav {
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
@@ -238,12 +245,13 @@ body {
   text-align: center;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 0.28px;
-  text-transform: capitalize;
-  color: var(--logo-text-color) !important;
+.nav__btn {
+  display: none;
+}
+@media (max-width: 992px) {
+  .nav__btn {
+    display: block;
+  }
 }
 
 .nav-list {
@@ -255,6 +263,11 @@ body {
   gap: 65px;
   font-weight: 500;
   font-size: 18px;
+}
+@media (max-width: 992px) {
+  .nav-list {
+    display: none;
+  }
 }
 
 .nav-list__item {
@@ -326,6 +339,58 @@ body {
   line-height: 25px;
   font-weight: 700;
   font-family: var(--font-cards);
+}
+
+.mobile-nav__wrapper {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  padding: 30px 20px;
+  background-color: var(--footer-bg);
+  color: var(--footer-text-color);
+}
+@media (max-width: 992px) {
+  .mobile-nav__wrapper--open {
+    display: block;
+  }
+}
+
+.mobile-nav__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-right: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.mobile-cart {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 30px;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.mobile-nav {
+  display: grid;
+  gap: 20px;
+  font-size: 22px;
+}
+
+.mobile-sub-nav {
+  padding: 20px 0 0 20px;
+  display: grid;
+  gap: 14px;
+  font-size: 16px;
 }
 
 .search-form {
@@ -697,7 +762,6 @@ body {
 }
 .footer a {
   color: var(--footer-text-color);
-  opacity: 0.8;
   transition: opacity 0.1s ease-in;
 }
 .footer a:hover {
