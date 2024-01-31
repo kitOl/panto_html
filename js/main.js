@@ -31,27 +31,27 @@ const swiper = new Swiper(".swiper", {
   loop: true,
   freeMode: true,
 
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 42,
   // Navigation arrows
   navigation: {
     nextEl: "#sliderNext",
     prevEl: "#sliderPrev",
   },
-  // breakpoints: {
-  //   640: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  //   768: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 32,
-  //   },
-  //   1340: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 42,
-  //   },
-  // },
+  breakpoints: {
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    920: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1230: {
+      slidesPerView: 4,
+      spaceBetween: 42,
+    },
+  },
 });
 
 const tabsBtns = document.querySelectorAll("[data-tab]");
