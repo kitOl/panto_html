@@ -37,4 +37,8 @@
       background: #fff;
     }
   }
+
+  @include mobile-m {
+    width: 55px;
+  }
 }

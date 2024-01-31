@@ -13,6 +13,10 @@
 
 .products__tabs {
   margin-bottom: 80px;
+
+  @include mobile-xl {
+    margin-bottom: clamp(30px, 0.387rem + 7.44vw, 80px);
+  }
 }
 
 .products__slider {

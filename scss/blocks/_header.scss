@@ -16,6 +16,14 @@
   a {
     color: var(--header-text-color);
   }
+
+  @include mobile-xl {
+    padding-top: 20px;
+
+    padding-bottom: 240px;
+    background-position: center;
+    aspect-ratio: unset;
+  }
 }
 
 .header__nav {
@@ -54,9 +62,13 @@
   display: inline-block;
   margin: 45px auto 0;
 
-  @include mobile-xl {
-    display: none;
+  @include mobile-m {
+    margin: 20px auto 0;
   }
+
+  // @include mobile-xl {
+  //   display: none;
+  // }
 }
 
 .header__dot {
